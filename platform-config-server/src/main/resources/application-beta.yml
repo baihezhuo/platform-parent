@@ -1,0 +1,38 @@
+spring:
+  application:
+    name: config-server
+  http: 
+    encoding: 
+      charset: UTF-8   
+  # git管理配置
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/baihezhuo/platform-parent  ##git地址
+          #searchPaths:                               ##git子包位置相对路径,比如不同的服务下面可以写不同的路径
+          #username: username
+          #password: password     
+          ##ps: 创建4个evn.properties、evn-test.properties、evn-dev.properties、evn-prod.properties 文件
+          ##    访问规则: http://localhost:4000/{application}/{profile}/{label}  
+          ##    其中{application}: 服务名称         {profile}: 配置文件后缀         {label}: 具体的分支名称
+          ##    则最后通过url直接访问测试,如:  http://localhost:4000/evn/test/
+   
+    #kafka
+    stream:
+      kafka: 
+        binder: 
+          zk-nodes: 192.168.1.111:2181,192.168.1.112:2181,192.168.1.113:2181
+          brokers: 192.168.1.51:9092
+        
+## bus : http://localhost:4000/bus/refresh
+server: 
+  context-path: /
+  port: 4001
+ 
+ 
+management:
+  security:
+    enabled: false
+ 
+
