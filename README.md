@@ -1,2 +1,2 @@
 # platform-parent
-platform
+platform-server-config
