@@ -10,7 +10,7 @@ import org.springframework.cloud.config.server.EnableConfigServer;
  * <B>模块名称：</B>Application<BR>
  * <B>中文类名：</B>应用启动主入口<BR>
  * <B>概要说明：</B>应用启动主入口<BR>
- * @author baihezhuo1234567890111
+ * @author baihezhuo1234567890
  * @since 2017年9月20日 下午3:02:56
  */
 @EnableConfigServer	//开启配置中心服务
